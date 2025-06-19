@@ -1,0 +1,15 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'christopherian96@gmail.com'
+  smtp_auth_username: 'christopherian96@gmail.com'
+  smtp_auth_password: 'eunqonrgemozqmuw' 
+
+route:
+  receiver: email-me
+  group_wait: 10s
+  repeat_interval: 1h
+
+receivers:
+  - name: email-me
+    email_configs:
+      - to: 'christopherian96@gmail.com'
